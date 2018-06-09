@@ -53,8 +53,8 @@
 
 				<div class="collapse navbar-collapse justify-content-end" id="navbarToggle">
 					<ul class="navbar-nav navbar-btns animated" data-animate="fadeInDown" data-delay="1.15">
-						<li class="nav-item"><a class="nav-link btn btn-sm btn-outline menu-link" href="#">Whitepaper</a></li>
-						<li class="nav-item"><a class="nav-link btn btn-sm btn-outline menu-link" href="#">Litepaper</a></li>
+						<li class="nav-item"><a class="nav-link btn btn-sm btn-outline menu-link" href="https://www.pixelalpha.io/whitepaper">Whitepaper</a></li>
+						<li class="nav-item"><a class="nav-link btn btn-sm btn-outline menu-link" href="https://www.pixelalpha.io/litepaper">Litepaper</a></li>
 					</ul>
 				</div>
 			</nav>
@@ -71,9 +71,9 @@
 
 								<h2 class="animated" data-animate="fadeInUp" data-delay="1.25">Sign up to join the whitelist</h2>
 								<p class="lead color-secondary animated" data-animate="fadeInUp" data-delay="1.1">and be part of the private presale.</p>
-								<div class=" animated" data-animate="fadeInUp" data-delay="2.05">
+								<!-- <div class=" animated" data-animate="fadeInUp" data-delay="2.05">
 										Or <a href="#" class="btn btn-alt btn-sm">Login</a>
-								</div>
+								</div> -->
 
 							</div>
 						</div><!-- .col  -->
@@ -102,12 +102,22 @@
 									<label class="input-title">Passport/Government-issued ID</label>
 								</div>
 								<div class="input-field animated" data-animate="fadeInUp" data-delay=".4">
-									<input name="contact-contribution" type="number" class="input-line required">
-									<label class="input-title">Intended Contribution (ETH)</label>
+									<label class="input-title">Contribution Type</label>
+									<select name="type" class="input-line required">
+										<option value="ETH">ETH</option>
+										<option value="BTC">BTC</option>
+										<option value="XLM">XLM</option>
+										<option value="USD">USD</option>
+										<option value="EUR">EUR</option>
+									</select>
 								</div>
 								<div class="input-field animated" data-animate="fadeInUp" data-delay=".4">
-									<input name="contact-eth" type="text" class="input-line required">
-									<label class="input-title">ETH Address</label>
+									<input name="contact-eth" type="text" class="input-line">
+									<label class="input-title">BTC/ETH/XLM Address (if 'USD' or 'EUR', leave blank)</label>
+								</div>
+								<div class="input-field animated" data-animate="fadeInUp" data-delay=".4">
+									<input name="contact-contribution" type="number" class="input-line required">
+									<label class="input-title">Intended Contribution (USD)</label>
 								</div>
 								<div class="input-field animated" data-animate="fadeInUp" data-delay=".4">
 									<input name="contact-pw" type="password" class="input-line required">
