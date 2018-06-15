@@ -69,8 +69,21 @@
 						<div class="col-lg-6 col-md-12">
 							<div class="header-txt tab-center mobile-center">
 
-								<h2 class="animated" data-animate="fadeInUp" data-delay="1.25">Sign up to join the whitelist</h2>
-								<p class="lead color-secondary animated" data-animate="fadeInUp" data-delay="1.1">and be part of the private presale.</p>
+								<!-- <h2 class="animated" data-anim/ate="fadeInUp" data-delay="1.25">Sign up to join the whitelist</h2>
+								<p class="lead color-secondary animated" data-animate="fadeInUp" data-delay="1.1">Join the whitelist and be part of the private presale.</p> -->
+
+								<!-- Timer on left side -->
+
+									<div class="countdown-box countdown-header text-center">
+										<span class="extra-line"></span>
+										<!-- <p class="lead color-secondary animated">Whitelist Closes In</p> -->
+										<h2 class="animated" data-anim/ate="fadeInUp" data-delay="1.25">Whitelist closes in</h2>
+										<div class="token-countdown d-flex align-content-stretch animated" data-animate="fadeInUp" data-delay="1.85" data-date="2018/06/25"></div>
+										<p class="lead color-secondary animated" data-animate="fadeInUp" data-delay="1.1">Don't miss the chance to be part of the private presale.</p>
+									</div>
+									<!-- <p class="lead color-secondary animated" data-animate="fadeInUp" data-delay="1.1">Don't miss being a part of the private presale.</p> -->
+
+								<!-- <div class="lead color-secondary animated" data-animate="fadeInUp" data-delay="1.1">Don't miss being a part of the private presale.</div> -->
 								<!-- <div class=" animated" data-animate="fadeInUp" data-delay="2.05">
 										Or <a href="#" class="btn btn-alt btn-sm">Login</a>
 								</div> -->
@@ -99,7 +112,7 @@
 								</div>
 								<div class="input-field animated" data-animate="fadeInUp" data-delay=".4">
 									<input name="contact-govid" type="file" class="input-line required">
-									<label class="input-title">Passport/Government-issued ID</label>
+									<label class="input-title">Passport/Government-issued ID<i class="fa fa-info-circle" data-toggle="govtid" title="Government ID is necessary for our Know Your Customer process to ensure compliance with all relevant jurisdictions."></i></label>
 								</div>
 								<div class="input-field animated" data-animate="fadeInUp" data-delay=".4">
 									<label class="input-title">Contribution Type</label>
@@ -116,12 +129,20 @@
 									<label class="input-title">BTC/ETH/XLM Address (if 'USD' or 'EUR', leave blank)</label>
 								</div>
 								<div class="input-field animated" data-animate="fadeInUp" data-delay=".4">
-									<input name="contact-contribution" type="number" class="input-line required">
-									<label class="input-title">Intended Contribution (USD)</label>
+									<!-- <input name="contact-contribution" class="input-line required"> -->
+									<label class="input-title">Potential Contribution (USD)<i class="fa fa-info-circle" data-toggle="contribution" title="You will not be obligated to contribute, but this number will help us gauge interest."></i></label>
+									<select name="amount">
+										<option value="Default">Select</option>
+										<option value="100">$100</option>
+										<option value="1000">$100-$1000</option>
+										<option value="10000">$1000-$10000</option>
+										<option value="25000">$10000-$25000</option>
+										<option value="25001">$25000+</option>
+									</select>
 								</div>
 								<div class="input-field animated" data-animate="fadeInUp" data-delay=".4">
 									<input name="contact-pw" type="password" class="input-line required">
-									<label class="input-title">Password</label>
+									<label class="input-title">Password<i class="fa fa-info-circle" data-toggle="pw" title="In the future, you will use your password to access your PixelAlpha dashboard. We only store password hashes."></i></label>
 								</div>
 								<input type="text" class="d-none" name="form-anti-honeypot" value="">
 								<div class="input-field animated" data-animate="fadeInUp" data-delay=".6">
@@ -167,6 +188,14 @@
 	<!-- JavaScript (include all script here) -->
 	<script src="assets/js/jquery.bundle.js?ver=113"></script>
 	<script src="assets/js/script.js?ver=113"></script>
-
+	<!-- v2 -->
+	<script src="assets/js/bootstrap.min"></script>
+	<script>
+	$(document).ready(function(){
+			$('[data-toggle="govtid"]').tooltip();
+			$('[data-toggle="pw"]').tooltip();
+			$('[data-toggle="contribution"]').tooltip();
+	});
+	</script>
 </body>
 </html>
